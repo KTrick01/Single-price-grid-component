@@ -113,6 +113,9 @@ body {
 }
 .subscriptionArea__btn:hover {
     transform: scale(1.02);
+    background-color: hsl(71, 85%, 64%);
+    color: black;
+    font-weight: 700;
 }
 
 
