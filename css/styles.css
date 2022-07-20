@@ -60,6 +60,7 @@ body {
 }
 .mainText__paragraph {
     color: var(--Grayish-Blue);
+    line-height: 1.5;
 }
 
 
