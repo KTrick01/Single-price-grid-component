@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    
+
+    --Cyan: hsl(179, 62%, 43%);
+    --Ligth-cyan: hsla(179, 62%, 43%, 0.76);
+    --Bright-Yellow: hsl(71, 73%, 54%);
+
+    --Light-Gray: hsl(204, 43%, 93%);
+    --Grayish-Blue: hsl(218, 22%, 67%);
+}
+
+html, body {
+    min-height: 100vh;
+}
+
+body {
+    background-color: var(--Light-Gray);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.priceComponent {
+    margin: 1rem;
+    border-radius: .5rem;
+    background-color: white;
+    max-width: 644px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+    "join join"
+    "subArea why";
+}
+
+
+.mainText {
+    grid-area: join;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem;
+
+}
+.mainText__title {
+    color:var(--Cyan);
+    font-size: 1.5rem;
+}
+.mainText__subtitle {
+    font-size: 1.1rem;
+    color: var(--Bright-Yellow);
+}
+.mainText__paragraph {
+    color: var(--Grayish-Blue);
+}
+
+
+.subscriptionArea {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 1rem;
+    background-color: var(--Cyan);
+    grid-area: subArea;
+    padding: 2rem;
+    border-radius: 0 0 0 .5rem;
+}
+.subscriptionArea__title {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+.subscriptionArea__price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.subscriptionArea__priceTxt {
+  color: #e5eff59d;
+  font-weight: 400;
+  
+}
+.subscriptionArea__priceNumber {
+    color: white;
+    font-size: 2rem;
+    font-weight: 700;
+}
+.subscriptionArea__text {
+    color: white;
+    font-weight: 400;
+}
+.subscriptionArea__btn {
+    box-shadow: 0 10px 10px rgba(95, 94, 94, 0.411);
+    text-decoration: none;
+    color: white;
+    border-radius: .5rem;
+    background-color: var(--Bright-Yellow);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1.5rem;
+    
+}
+
+
+
+.whyUsArea {
+    border-radius: 0 0 .5rem 0;
+    display: flex;
+    flex-direction: column;
+    
+    gap: 1rem;
+    padding: 2rem;
+    background-color: var(--Ligth-cyan);
+    grid-area: why;
+}
+.whyUsArea__title {
+    color: white;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+.whyUsArea__paragraph {
+    color: var(--Light-Gray);
+    line-height: 1.6;
+    font-size: .9rem;
+    width: 65%;
+}
+
+@media (max-width: 500px) {
+    .priceComponent {
+        grid-template-areas: 
+        "join join"
+        "subArea subArea"
+        "why why";
+    }
+    .subscriptionArea {
+        border-radius: 0;
+    }
+    .whyUsArea {
+        border-radius: 0 0 .5rem .5rem;
+    }
+}
