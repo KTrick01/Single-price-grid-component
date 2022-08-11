@@ -145,6 +145,7 @@ body {
 
 @media (max-width: 500px) {
     .priceComponent {
+        margin-bottom: 4rem;
         grid-template-areas: 
         "join join"
         "subArea subArea"
